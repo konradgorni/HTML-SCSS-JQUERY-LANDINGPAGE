@@ -1,0 +1,110 @@
+.header {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../assets/images/header_background_image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_introduction {
+  color: white;
+  background-color: blue;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.header_brand {
+  position: absolute;
+  top: 2vh;
+  left: 2vh;
+}
+
+.header_brand img {
+  width: 100px;
+  height: 40px;
+}
+
+.header .menu-toggle {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  position: absolute;
+  top: 2vh;
+  right: 2vh;
+  z-index: 10;
+  position: fixed;
+}
+
+.header_nav {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  width: 100%;
+  background-color: url(http://fc02.deviantart.net/fs71/i/2011/274/6/f/ocean__sky__stars__and_you_by_muddymelly-d4bg1ub.png);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)));
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.header_nav_list_element {
+  width: 100vw;
+  height: 10vh;
+  border: 1px solid black;
+  line-height: 10vh;
+}
+
+.header_nav_list_element_link {
+  text-decoration: none;
+  color: red;
+  font-size: 30px;
+}
+
+.header .hide {
+  left: 0%;
+}
+
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+/*# sourceMappingURL=index.css.map */
