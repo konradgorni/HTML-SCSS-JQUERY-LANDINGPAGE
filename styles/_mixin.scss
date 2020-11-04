@@ -1,0 +1,25 @@
+@mixin flex-center($direction, $justify, $align) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin custom-buttom($background, $width, $height, $borderColor, $fontSize) {
+    width: $width;
+    height: $height;
+    background-color: $background;
+    border-radius: 0.2rem;
+    border: 1px solid $borderColor;
+    font-size: $fontSize;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 1s ease-in-out;
+
+    &:hover {
+        color: orange;
+    }
+
+
+}

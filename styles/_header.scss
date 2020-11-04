@@ -1,3 +1,5 @@
+@import '_mixin.scss';
+
 .header {
     height: 100vh;
     width: 100%;
@@ -6,21 +8,101 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center(column, center, center);
 
 
+    &_background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url("../assets/images/header_background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &_icon {
+        width: 5rem;
+        height: 5rem;
+        background-image: url("../assets/images/header_icon.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        bottom: -2.5rem;
+
+    }
 
 
     &_introduction {
-        color: white;
-        background-color: blue;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+
+
+        height: 60vh;
         text-align: center;
+        z-index: 2;
+        @include flex-center(column, space-around, null);
+
+        &_buttonsWrapper {
+            @include flex-center(column, space-between, center);
+            width: 100%;
+            margin-top: 5vh;
+
+            &_button {
+                @include custom-buttom(red, 18rem, 4rem, #e74c3c, 1.5rem);
+                margin: 2vh 0;
+            }
+
+            &_button:last-child {
+                @include custom-buttom(transparent, 18rem, 4rem, white, 1.5rem);
+            }
+
+
+        }
+
+
+
+        &_title {
+            font-weight: bold;
+            font-size: 3rem;
+        }
+
+        &_description {
+            font-size: 1.2rem;
+            color: #cbc6c0;
+
+        }
+
+        &_motto {
+            font-size: 1.5rem;
+        }
+
+        &_symbol {
+            height: 1rem;
+
+
+            &_line {
+                display: inline-block;
+                width: 8rem;
+                height: 0.1rem;
+                background-color: white;
+                margin: 0 3%;
+                line-height: 1rem;
+
+            }
+
+            &_dot {
+                width: 1rem;
+                height: 1rem;
+                line-height: 0.2rem;
+                display: inline-block;
+                background-color: red;
+                border-radius: 50%;
+            }
+        }
+
+
 
     }
 
@@ -28,48 +110,55 @@
         position: absolute;
         top: 2vh;
         left: 2vh;
+        z-index: 2;
 
         img {
-            width: 100px;
-            height: 40px;
+            width: 12rem;
+            height: 5rem;
         }
     }
 
     .menu-toggle {
-        width: 50px;
-        height: 50px;
-        background-color: black;
         position: absolute;
         top: 2vh;
         right: 2vh;
         z-index: 10;
         position: fixed;
+
+
+        i {
+            color: orange;
+            font-size: 3.5rem;
+        }
+
+
     }
 
     &_nav {
 
-        position: absolute;
+        z-index: 3;
+        position: fixed;
         top: 0;
-        left: -100%;
+        left: -100vw;
         height: 100vh;
-        width: 100%;
-        background-color: url(http://fc02.deviantart.net/fs71/i/2011/274/6/f/ocean__sky__stars__and_you_by_muddymelly-d4bg1ub.png);
-        background:
-            linear-gradient(rgba(0, 0, 0, 0.7),
-                rgba(0, 0, 0, 0.7));
+        width: 100vw;
         display: flex;
         flex-direction: column;
         text-align: center;
         justify-content: center;
         transition: 1s ease-in-out;
+        background-color: black;
 
         &_list {
+            list-style-type: none;
 
             &_element {
-                width: 100vw;
+                width: 70vw;
                 height: 10vh;
-                border: 1px solid black;
+                margin: 0 auto;
+                border-bottom: 1px solid gray;
                 line-height: 10vh;
+
 
 
 
@@ -79,8 +168,9 @@
 
                 &_link {
                     text-decoration: none;
-                    color: red;
-                    font-size: 30px;
+                    color: white;
+                    font-size: 2rem;
+                    float: left;
                 }
             }
         }
@@ -89,5 +179,9 @@
     .hide {
         left: 0%;
 
+    }
+
+    .active {
+        display: none;
     }
 }

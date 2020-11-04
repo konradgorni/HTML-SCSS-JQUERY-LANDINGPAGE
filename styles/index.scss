@@ -1,12 +1,36 @@
 @import './header';
+@import './info';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
-* {
-    margin: 0;
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+    margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1 rem 10px */
+    font-weight: 400;
 }
 
 body {
-    background-color: white;
+    background-color: black;
+    font-family: 'Open Sans',
+        sans-serif;
+    color: white;
 
+
+}
+
+section {
+    height: 100vh;
+}
+
+.btn {
+    background-color: red;
 }

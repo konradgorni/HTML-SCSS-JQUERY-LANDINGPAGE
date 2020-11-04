@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 .header {
   height: 100vh;
   width: 100%;
@@ -9,46 +10,160 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.header_introduction {
-  color: white;
-  background-color: blue;
-  height: 50vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.header_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/images/header_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header_icon {
+  width: 5rem;
+  height: 5rem;
+  background-image: url("../assets/images/header_icon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: -2.5rem;
+}
+
+.header_introduction {
+  height: 60vh;
+  text-align: center;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header_introduction_buttonsWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-top: 5vh;
+}
+
+.header_introduction_buttonsWrapper_button {
+  width: 18rem;
+  height: 4rem;
+  background-color: red;
+  border-radius: 0.2rem;
+  border: 1px solid #e74c3c;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  margin: 2vh 0;
+}
+
+.header_introduction_buttonsWrapper_button:hover {
+  color: orange;
+}
+
+.header_introduction_buttonsWrapper_button:last-child {
+  width: 18rem;
+  height: 4rem;
+  background-color: transparent;
+  border-radius: 0.2rem;
+  border: 1px solid white;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.header_introduction_buttonsWrapper_button:last-child:hover {
+  color: orange;
+}
+
+.header_introduction_title {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.header_introduction_description {
+  font-size: 1.2rem;
+  color: #cbc6c0;
+}
+
+.header_introduction_motto {
+  font-size: 1.5rem;
+}
+
+.header_introduction_symbol {
+  height: 1rem;
+}
+
+.header_introduction_symbol_line {
+  display: inline-block;
+  width: 8rem;
+  height: 0.1rem;
+  background-color: white;
+  margin: 0 3%;
+  line-height: 1rem;
+}
+
+.header_introduction_symbol_dot {
+  width: 1rem;
+  height: 1rem;
+  line-height: 0.2rem;
+  display: inline-block;
+  background-color: red;
+  border-radius: 50%;
 }
 
 .header_brand {
   position: absolute;
   top: 2vh;
   left: 2vh;
+  z-index: 2;
 }
 
 .header_brand img {
-  width: 100px;
-  height: 40px;
+  width: 12rem;
+  height: 5rem;
 }
 
 .header .menu-toggle {
-  width: 50px;
-  height: 50px;
-  background-color: black;
   position: absolute;
   top: 2vh;
   right: 2vh;
@@ -56,15 +171,18 @@
   position: fixed;
 }
 
+.header .menu-toggle i {
+  color: orange;
+  font-size: 3.5rem;
+}
+
 .header_nav {
-  position: absolute;
+  z-index: 3;
+  position: fixed;
   top: 0;
-  left: -100%;
+  left: -100vw;
   height: 100vh;
-  width: 100%;
-  background-color: url(http://fc02.deviantart.net/fs71/i/2011/274/6/f/ocean__sky__stars__and_you_by_muddymelly-d4bg1ub.png);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)));
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,33 +196,64 @@
           justify-content: center;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
+  background-color: black;
+}
+
+.header_nav_list {
+  list-style-type: none;
 }
 
 .header_nav_list_element {
-  width: 100vw;
+  width: 70vw;
   height: 10vh;
-  border: 1px solid black;
+  margin: 0 auto;
+  border-bottom: 1px solid gray;
   line-height: 10vh;
 }
 
 .header_nav_list_element_link {
   text-decoration: none;
-  color: red;
-  font-size: 30px;
+  color: white;
+  font-size: 2rem;
+  float: left;
 }
 
 .header .hide {
   left: 0%;
 }
 
-* {
-  margin: 0;
+.header .active {
+  display: none;
+}
+
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1 rem 10px */
+  font-weight: 400;
 }
 
 body {
-  background-color: white;
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+section {
+  height: 100vh;
+}
+
+.btn {
+  background-color: red;
 }
 /*# sourceMappingURL=index.css.map */
