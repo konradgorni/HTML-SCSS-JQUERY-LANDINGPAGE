@@ -21,71 +21,33 @@ $("document").ready(() => {
     let currentImage = 0;
     let categoryArray
 
-    const carusel = (direction, category, categoryArray) => {
+    const carusel = (direction, categoryArray, categoryArrayLength) => {
         const img = $(".works_wrapper_img")[0];
-        console.log(`direction ${direction} category ${category} length ${length} 
-        category length${categoryArray.length}`)
 
         if (direction === "right") {
-            if (category === "ALL") {
-                ++currentImage;
-
-                if (currentImage === List.length - 1) {
-                    currentImage = 0;
-                    img.setAttribute("src", `${List[currentImage].path}`)
-                } else {
-                    //  currentImage++;
-                    img.setAttribute("src", `${List[currentImage].path}`)
-                }
+            if (currentImage === categoryArrayLength) {
+                currentImage = 0;
+                img.setAttribute("src", `${categoryArray[currentImage].path}`)
 
             } else {
-                if (currentImage === categoryArray.length - 1) {
-                    currentImage = 0;
-                    img.setAttribute("src", `${categoryArray[currentImage].path}`)
-                } else {
-                    //  currentImage++;
-                    img.setAttribute("src", `${categoryArray[currentImage].path}`)
-                }
-
-
-
+                currentImage++;
+                img.setAttribute("src", `${categoryArray[currentImage].path}`)
             }
 
         }
         if (direction === "left") {
-            if (category === "ALL") {
-
-                if (currentImage === -1) {
-                    currentImage = List.length - 1;
-                    img.setAttribute("src", `${List[currentImage].path}`)
-                } else {
-
-                    img.setAttribute("src", `${List[currentImage].path}`)
-
-                }
+            if (currentImage === 0) {
+                currentImage = categoryArrayLength;
+                img.setAttribute("src", `${categoryArray[categoryArrayLength].path}`)
 
             } else {
-                if (currentImage === -1) {
-                    currentImage = categoryArray.length - 1
-                    img.setAttribute("src", `${categoryArray[currentImage].path}`)
-                } else {
-
-                    img.setAttribute("src", `${categoryArray[currentImage].path}`)
-                }
-
-
+                currentImage--;
+                img.setAttribute("src", `${categoryArray[currentImage].path}`)
             }
-
-            --currentImage;
         }
 
-
-
-
-
-
     };
-//change active category
+    //change active category
     $(".works_category_element").click(function () {
         $(".active").removeClass("active");
         $(this).addClass("active");
@@ -100,10 +62,16 @@ $("document").ready(() => {
 
     $(".works_wrapper_button").click((event) => {
         const direction = event.target.getAttribute('data-target');
-        categoryArray = List.filter(photo => photo.category === category)
-        const categoryArrayLength = categoryArray.length;
-        carusel(direction, category, categoryArray);
-        
+        if (category === "ALL") {
+            categoryArray = List;
+        } else {
+            categoryArray = List.filter(photo => photo.category === category)
+        }
+
+        const categoryArrayLength = categoryArray.length -1;
+        carusel(direction, categoryArray, categoryArrayLength);
+        console.log(categoryArrayLength,categoryArray)
+
 
 
     })
