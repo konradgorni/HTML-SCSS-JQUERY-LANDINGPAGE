@@ -1,0 +1,44 @@
+@import '_mixin.scss';
+
+.history {
+    height: 100vh;
+    width: 100vw;
+
+    @include flex-center(column, space-around, center);
+
+    p {
+        margin: 5vh 0;
+        color: #999999;
+    }
+
+    &_img {
+        width: 70vw;
+
+    }
+
+    &_wrapper {
+        text-align: center;
+        width: 70vw;
+
+        &_title {
+            color: #6a6a6a;
+            font-size: 1.8rem;
+            line-height: 2rem;
+
+            &:before {
+                content: "";
+                height: 2rem;
+                display: inline-block;
+                width: 2px;
+                background-color: red;
+                margin-right: 2vw;
+
+            }
+        }
+
+        &_button {
+
+            @include custom-buttom(red, 18rem, 4rem, #e74c3c, 1.5rem)
+        }
+    }
+}

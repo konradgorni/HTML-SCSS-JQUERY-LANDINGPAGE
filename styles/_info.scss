@@ -1,0 +1,72 @@
+@import '_mixin.scss';
+
+.info {
+    min-height: 150vh;
+    width: 100vw;
+    @include flex-center(column, space-around, center);
+    border-bottom: 1px solid #cbc6c0;
+
+    &_wrapper {
+        width: 60vw;
+        @include flex-center(column, space-between, center);
+        text-align: center;
+        min-height: 30vh;
+        margin-top: 5vh;
+
+
+
+        &_square {
+            @include flex-center(row, center, center);
+            width: 4rem;
+            height: 4rem;
+            line-height: 4rem;
+            display: block;
+            border: 1px solid #cbc6c0;
+
+            i {
+                font-size: 1.5rem;
+                line-height: 4rem;
+                color: red;
+
+            }
+
+            i.active {
+                transform: rotate(-45deg);
+            }
+
+
+
+
+        }
+
+        &_square.active {
+            border: 1px solid red;
+            width: 4rem;
+            height: 4rem;
+            transform: rotate(45deg);
+        }
+
+
+
+        &_title {
+            color: #6a6a6a;
+            font-size: 1.8rem;
+        }
+
+        &_line {
+            display: inline-block;
+            width: 5rem;
+            height: 0.2rem;
+            background-color: #6a6a6a;
+        }
+
+        &_description {
+            color: #cbc6c0;
+        }
+
+
+
+    }
+
+
+}
