@@ -1,0 +1,99 @@
+@import '_mixin.scss';
+
+.study {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    color: #acacac;
+    border-top: 1px solid #cbc6c0;
+
+    &_title {
+        color: #6a6a6a;
+        font-size: 1.8rem;
+        margin: 5vh 0;
+
+        &:before {
+            content: "";
+            height: 2rem;
+            display: inline-block;
+            width: 0.2rem;
+            background-color: red;
+            margin-right: 2vw;
+
+
+        }
+    }
+
+    &_description {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    &_wrapper {
+        margin-top: 2vh;
+        width: 100vw;
+        height: auto;
+
+
+        &_post {
+            height: 77vh;
+            // background-color: green;
+            @include flex-center(column, space-around, center);
+            width: 75%;
+            margin: 0 auto;
+            -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+
+            &_square {
+                width: 4.5rem;
+                height: 4.5rem;
+                background-color: red;
+                transform: rotate(45deg);
+                @include flex-center(row, center, center);
+
+
+                i {
+                    transform: rotate(-45deg);
+                    font-size: 2rem;
+                    color: white;
+                }
+            }
+
+            &_title {
+                color: #6a6a6a;
+            }
+
+            &_symbol {
+                display: block;
+                width: 5rem;
+                height: 0.2rem;
+                background-color: #6a6a6a;
+                ;
+            }
+
+            &_button {
+                @include custom-buttom(red, 20rem, 5rem, red, 1.5rem)
+            }
+
+            &_dotWrapper {
+
+                width: 20%;
+                height: 3rem;
+                @include flex-center(row, space-around, center);
+
+                &_dot {
+                    display: block;
+                    width: 1rem;
+                    height: 1rem;
+                    border-radius: 50%;
+                    background-color: gray;
+                }
+
+                &_dot.active_dot {
+                    background-color: red;
+                }
+            }
+        }
+    }
+}

@@ -6,6 +6,8 @@
     color: #999999;
 
 
+
+
     &_title {
         padding: 2vh 0;
         color: #6a6a6a;
@@ -13,6 +15,17 @@
         letter-spacing: 1px;
         text-align: center;
         font-size: 1.8rem;
+
+        &:before {
+            content: "";
+            height: 2rem;
+            display: inline-block;
+            width: 0.2rem;
+            background-color: red;
+            margin-right: 2vw;
+
+
+        }
     }
 
     &_description {
@@ -72,6 +85,7 @@
         margin: 5vh 0;
         width: 100%;
         min-height: 50vh;
+        transition: 1s ease-in-out;
 
         @include flex-center(row, center, center);
 
@@ -80,6 +94,7 @@
             width: 70%;
             height: 50%;
             border: 1px solid black;
+
 
         }
 

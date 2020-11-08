@@ -1,0 +1,69 @@
+@import '_mixin.scss';
+
+.blog {
+    text-align: center;
+
+    &_title {
+        color: #6a6a6a;
+        font-size: 2rem;
+        margin-top: 2vh;
+    }
+
+    &_text {
+        margin: 2vh 0;
+        color: #999999;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    &_wrapper {
+
+
+        &_element {
+            @include flex-center(column, center, center);
+            height: 60vh;
+            width: 90vw;
+            margin: 5vh auto;
+
+
+            &_img {
+                width: 100%;
+                height: 50%;
+
+            }
+
+            &_post {
+                background-color: #e74e3e;
+                width: 100%;
+                height: 50%;
+                text-align: left;
+                padding: 5%;
+                @include flex-center(column, center, flex-start);
+
+                &_text {
+                    font-size: 1.2rem;
+                }
+
+                &_title {
+                    margin: 1vh 0;
+                    font-size: 1.8rem;
+                }
+
+                &_description {
+                    font-size: 1.2rem;
+                }
+
+                &_link {
+                    padding-top: 5vh;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1rem;
+
+                    &:hover {
+                        color: goldenrod;
+                    }
+                }
+            }
+        }
+    }
+}
