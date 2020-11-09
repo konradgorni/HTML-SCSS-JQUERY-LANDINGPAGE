@@ -2,7 +2,8 @@
 @import "_variables.scss";
 
 .info {
-    min-height: 150vh;
+
+    height: auto;
     width: 100vw;
     @include flex-center(column, space-around, center);
     border-bottom: 1px solid #cbc6c0;
@@ -12,7 +13,7 @@
         @include flex-center(column, space-between, center);
         text-align: center;
         min-height: 30vh;
-        margin-top: 5vh;
+        margin: 5vh 0;
 
 
 
@@ -51,7 +52,16 @@
 
         &_title {
             color: $titleColor;
-            font-size: 1.8rem;
+
+            @include fontSize("smallh2");
+
+            @include breakpoint("smallxl") {
+                @include fontSize("smallxlh2")
+            }
+
+            @include breakpoint("tablet") {
+                @include fontSize("tableth2")
+            }
         }
 
         &_line {
@@ -63,6 +73,15 @@
 
         &_description {
             color: $textColor;
+            @include fontSize("smalltext");
+
+            @include breakpoint("smallxl") {
+                @include fontSize("smallxltext")
+            }
+
+            @include breakpoint("tablet") {
+                @include fontSize("tablettext")
+            }
         }
 
 

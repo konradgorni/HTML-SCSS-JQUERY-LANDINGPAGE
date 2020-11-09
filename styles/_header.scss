@@ -57,6 +57,8 @@ $sizePage:("small": 2rem,
             &_button {
                 @include custom-buttom(red, 18rem, 4rem, #e74c3c, 1.5rem);
                 margin: 2vh 0;
+
+
             }
 
             &_button:last-child {
@@ -71,17 +73,27 @@ $sizePage:("small": 2rem,
         &_title {
             font-weight: bold;
             font-size: 3rem;
+
+            @include breakpoint('tablet') {
+                @include fontSize('medium');
+            }
         }
 
         &_description {
             font-size: 1.2rem;
             color: $textColor;
+            width: 80%;
+            margin: 0 auto;
 
 
         }
 
         &_motto {
             font-size: 1.5rem;
+
+            @include breakpoint('tablet') {
+                font-size: 1.7rem
+            }
         }
 
     }

@@ -25,35 +25,44 @@
 }
 
 $breakpoints:(small:320px,
-    smallX:375px,
-    smallXX:410px,
+    smallxl:410px,
     tablet:768px,
     laptop:1250px,
     screen:1400px,
-    screenXL:1600px,
+    screenxl:1600px,
 );
 
 @mixin breakpoint($breakpoint) {
-
-    // If the key exists in the map
     @if map-has-key($breakpoints, $breakpoint) {
-
-        // Prints a media query based on the value
         @media (min-width: map-get($breakpoints, $breakpoint)) {
             @content;
         }
     }
 
-    // If the key doesn't exist in the map
     @else {
         @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
         +"Available breakpoints are: #{map-keys($breakpoints)}.";
     }
 }
 
-// .selector {
-//     color: red;
+$textSize:(smalltext:1.2rem,
+    smallXLtext:1.4rem,
+    tablettext:1.6rem,
+    laptoptext:1.7rem,
+    screentext:1.8rem,
+    screenXLtext:1.9rem,
+    smallh2:1.8rem,
+    smallxlh2:1.9rem,
+    tableth2:2.3rem,
+    laptoph2:2.5rem,
+    screnh2:2.6rem,
+    screenxlh2:2.7rem,
 
-//     @include respond-to('small') {
-//         color: blue;
-//     }
+
+
+);
+
+@mixin fontSize($size) {
+    font-size: map-get($textSize, $size);
+
+}
