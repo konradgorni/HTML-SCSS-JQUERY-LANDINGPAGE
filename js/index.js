@@ -79,16 +79,6 @@ $("document").ready(() => {
 
     })
 
-
-    //study cart event
-    // $(".works_category_element").click(function () {
-    //     $(".active").removeClass("active");
-    //     $(this).addClass("active");
-    //     category = this.textContent
-    //     currentImage = 0;
-
-    // })
-
     let currentCard = 0;
     const changeDot = (direction) => {
         const dots = $(".study_wrapper_post_dotWrapper_dot");
@@ -125,22 +115,22 @@ $("document").ready(() => {
         let postIcon = $(".study_wrapper_post_square i")[0];
         let postTitle = $(".study_wrapper_post_title")[0];
         let postText = $(".study_wrapper_post_text")[0];
-        
-        
-        postIcon.classList=postsList[currentCard].iconClass;
+
+
+        postIcon.classList = postsList[currentCard].iconClass;
 
 
 
-        postTitle.textContent=postsList[currentCard].title;
-        postText.textContent=postsList[currentCard].description;
+        postTitle.textContent = postsList[currentCard].title;
+        postText.textContent = postsList[currentCard].description;
 
     };
 
     ///cash post
-changePosts()
+    changePosts()
 
     $(".study_wrapper_post").on("swipeleft", function () {
-      
+
 
         $(".active_dot").removeClass("active_dot");
         changeDot("right");
@@ -151,5 +141,10 @@ changePosts()
         changePosts();
     });
     // 
+
+    //scroll up
+    $(".footer_scroll").click(() => {
+        window.scrollTo(0, 0);
+    })
 
 })

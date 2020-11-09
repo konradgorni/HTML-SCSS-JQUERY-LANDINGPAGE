@@ -569,7 +569,7 @@
 .study_title {
   color: #6a6a6a;
   font-size: 1.8rem;
-  margin: 5vh 0;
+  margin: 2vh 0;
 }
 
 .study_title:before {
@@ -807,6 +807,15 @@
   color: #6a6a6a;
 }
 
+.pricing_title:before {
+  content: "";
+  height: 2rem;
+  display: inline-block;
+  width: 0.2rem;
+  background-color: red;
+  margin-right: 2vw;
+}
+
 .pricing_description {
   width: 70vw;
   margin: 2vh 0;
@@ -916,6 +925,7 @@
   font-weight: bold;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
+  color: white;
 }
 
 .pricing_wrapper_card_body_button:hover {
@@ -1085,8 +1095,277 @@
 }
 
 .contact {
-  min-height: 100vh;
+  height: 150vh;
   background-color: #f4f5f9;
+  text-align: center;
+  color: #999999;
+  padding: 5% 0;
+}
+
+.contact_title {
+  color: #6a6a6a;
+  font-size: 2rem;
+}
+
+.contact_text {
+  font-size: 1.2rem;
+  width: 70%;
+  margin: 2vh auto;
+}
+
+.contact_wrapper {
+  height: 80%;
+  width: 100%;
+}
+
+.contact_wrapper div {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.contact_wrapper_information {
+  height: 40%;
+  width: 80%;
+  margin: 5% auto;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.contact_wrapper_information_element {
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact_wrapper_information_element_title {
+  color: red;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+}
+
+.contact_wrapper_information_element_text {
+  font-size: 1.3rem;
+}
+
+.contact_wrapper_form {
+  height: 60%;
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.contact_wrapper_form_container {
+  height: 70%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact_wrapper_form_container_element {
+  width: 100%;
+  height: 15%;
+}
+
+.contact_wrapper_form_container_element_input {
+  width: 100%;
+  height: 60px;
+  border: none;
+  background-color: white;
+  border-bottom: 1px solid gray;
+  font-size: 1.6rem;
+}
+
+.contact_wrapper_form_container_element_error {
+  height: 20%;
+  width: 100%;
+  color: red;
+  font-size: 1.2rem;
+}
+
+.contact_wrapper_form_button {
+  width: 15rem;
+  height: 4rem;
+  background-color: red;
+  border-radius: 0.2rem;
+  border: 1px solid #999999;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.contact_wrapper_form_button:hover {
+  color: orange;
+}
+
+.footer {
+  height: 40vh;
+  background-image: url("../assets/images/footer_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-shadow: black 0.3em 0.3em 0.5em;
+}
+
+.footer_title {
+  font-size: 2rem;
+}
+
+.footer_text {
+  width: 80%;
+  font-size: 1.2rem;
+}
+
+.footer_button {
+  width: 18rem;
+  height: 4rem;
+  background-color: red;
+  border-radius: 0.2rem;
+  border: 1px solid #e74c3c;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  margin: 2vh 0;
+}
+
+.footer_button:hover {
+  color: orange;
+}
+
+.footer_footer {
+  position: absolute;
+  bottom: 0;
+  height: 8vh;
+  width: 100%;
+  background-color: #202020;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #828282;
+}
+
+.footer_footer_icons {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer_footer_icons a {
+  text-decoration: none;
+}
+
+.footer_footer_icons a i {
+  font-size: 1.8rem;
+  color: #828282;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.footer_footer_icons a i:hover {
+  color: red;
+}
+
+.footer_scroll {
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: white;
+  background-color: red;
+  text-align: center;
+  line-height: 3rem;
+  position: absolute;
+  bottom: 4rem;
+  right: .5rem;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.footer_scroll:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.footer_scroll:hover i {
+  color: red;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.footer_scroll i {
+  font-size: 1.5rem;
 }
 
 *,

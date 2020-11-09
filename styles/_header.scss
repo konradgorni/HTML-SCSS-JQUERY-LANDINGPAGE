@@ -1,4 +1,5 @@
 @import '_mixin.scss';
+@import "_variables.scss";
 
 .header {
     height: 100vh;
@@ -72,6 +73,7 @@
         &_description {
             font-size: 1.2rem;
             color: #cbc6c0;
+
 
         }
 

@@ -1,0 +1,92 @@
+@import '_mixin.scss';
+
+.footer {
+    height: 40vh;
+    background-image: url("../assets/images/footer_background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    @include flex-center(column, center, center);
+
+    text-shadow: black 0.3em 0.3em 0.5em;
+
+    &_title {
+        font-size: 2rem;
+    }
+
+    &_text {
+        width: 80%;
+        font-size: 1.2rem;
+
+    }
+
+    &_button {
+        @include custom-buttom(red, 18rem, 4rem, #e74c3c, 1.5rem);
+        margin: 2vh 0;
+    }
+
+
+    &_footer {
+        position: absolute;
+        bottom: 0;
+        height: 8vh;
+        width: 100%;
+        background-color: #202020;
+        @include flex-center(row, space-around, center);
+        color: #828282;
+
+
+        &_icons {
+            width: 40%;
+            @include flex-center(row, space-around, center);
+
+            a {
+                text-decoration: none;
+
+
+
+
+                i {
+                    font-size: 1.8rem;
+                    color: #828282;
+                    transition: 1s ease-in-out;
+
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+
+    &_scroll {
+        border: none;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        color: white;
+        background-color: red;
+        text-align: center;
+        line-height: 3rem;
+        position: absolute;
+        bottom: 4rem;
+        right: .5rem;
+        transition: 1s ease-in-out;
+
+        &:hover {
+            background-color: white;
+            cursor: pointer;
+
+            i {
+                color: red;
+                transition: 1s ease-in-out;
+            }
+        }
+
+        i {
+            font-size: 1.5rem;
+        }
+    }
+}
