@@ -1,17 +1,18 @@
 @import '_mixin.scss';
+@import "_variables.scss";
 
 .blog {
     text-align: center;
 
     &_title {
-        color: #6a6a6a;
+        color: $titleColor;
         font-size: 2rem;
         margin-top: 2vh;
     }
 
     &_text {
         margin: 2vh 0;
-        color: #999999;
+        color: $textColor;
         width: 70%;
         margin: 0 auto;
     }

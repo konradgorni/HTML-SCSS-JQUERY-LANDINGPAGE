@@ -1,6 +1,9 @@
 @import '_mixin.scss';
 @import "_variables.scss";
 
+$sizePage:("small": 2rem,
+    "medium":3rem);
+
 .header {
     height: 100vh;
     width: 100%;
@@ -72,7 +75,7 @@
 
         &_description {
             font-size: 1.2rem;
-            color: #cbc6c0;
+            color: $textColor;
 
 
         }

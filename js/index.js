@@ -147,4 +147,61 @@ $("document").ready(() => {
         window.scrollTo(0, 0);
     })
 
-})
+
+    // validation
+    $('.contact_wrapper_form_form').submit((e) => {
+        e.preventDefault();
+        let name = $('#form_name').val();
+        let email = $('#form_email').val();
+        let subject = $('#form_subject').val();
+        let message = $('#form_message').val();
+        let validForm = true;
+
+        $(".error").remove();
+
+        if (name.length < 1) {
+            $('#form_name').after('<p class="error">This field is required</p>');
+
+            validForm = false;
+        } else if (name.length < 3) {
+            $('#form_name').after('<p class="error">Its unavaliable have 2 letters name</p>');
+            validForm = false;
+        }
+        if (email.length < 1) {
+            $('#form_email').after('<p class="error">This field is required</p>');
+            validForm = false;
+        } else {
+            var regEx = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+            var validEmail = regEx.test(email);
+            if (!validEmail) {
+                $('#form_email').after('<p class="error">Enter a valid email</p>');
+                validForm = false;
+            }
+        }
+        if (subject.length < 1) {
+            $('#form_subject').after('<p class="error">This field is required</p>');
+            validForm = false;
+        } else if (subject.length < 5) {
+            $('#form_subject').after('<p class="error">Min 5 letters</p>');
+            validForm = false;
+        }
+        if (message.length < 1) {
+            ;
+            $('#form_message').after('<p class="error">This field is required</p>')
+            validForm = false;
+        } else if (message.length < 10) {
+            $('#form_message').after('<p class="error">Min letters 10</p>')
+            validForm = false;
+        }
+
+
+        if (validForm === true) {
+
+            $('#form_contact')[0].reset();
+
+            $('#form_button').after('<p class="correct">Message sent</p>')
+
+
+        }
+    });
+});

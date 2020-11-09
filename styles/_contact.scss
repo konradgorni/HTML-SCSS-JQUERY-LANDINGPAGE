@@ -1,15 +1,16 @@
 @import '_mixin.scss';
+@import "_variables.scss";
 
 .contact {
     height: 150vh;
     background-color: #f4f5f9;
     text-align: center;
-    color: #999999;
+    color: $textColor;
     padding: 5% 0;
 
 
     &_title {
-        color: #6a6a6a;
+        color: $titleColor;
         font-size: 2rem;
     }
 
@@ -59,42 +60,47 @@
             height: 60%;
             width: 80%;
             margin: 0 auto;
-            @include flex-center(column, space-around, center);
+            @include flex-center(column, center, center);
             -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 
-            &_container {
-                height: 70%;
-                width: 80%;
+            &_form {
+                width: 90%;
+                height: 90%;
                 @include flex-center(column, space-around, center);
 
                 &_element {
+                    @include flex-center(column, space-around, center);
                     width: 100%;
-                    height: 15%;
+                    height: 20%;
+                    margin: 0 auto;
 
-                    &_input {
-                        width: 100%;
-                        height: 60px;
+
+                    input {
                         border: none;
-                        background-color: white;
+                        width: 100%;
+                        height: 50px;
+                        font-size: 2rem;
                         border-bottom: 1px solid gray;
-                        font-size: 1.6rem;
                     }
 
-                    &_error {
-                        height: 20%;
-                        width: 100%;
+                    p {
+                        font-size: 1.4rem;
                         color: red;
-                        font-size: 1.2rem;
                     }
+
 
                 }
+
+                button {
+                    @include custom-buttom(red, 18rem, 4rem, white, 1.5rem);
+                }
+
             }
 
-            &_button {
-
-                @include custom-buttom(red, 15rem, 4rem, #999999, 1.2rem);
+            .correct {
+                color: green;
             }
         }
     }

@@ -122,7 +122,7 @@
 
 .header_introduction_description {
   font-size: 1.2rem;
-  color: #cbc6c0;
+  color: #999999;
 }
 
 .header_introduction_motto {
@@ -295,7 +295,7 @@
 }
 
 .info_wrapper_description {
-  color: #cbc6c0;
+  color: #999999;
 }
 
 .history {
@@ -419,7 +419,7 @@
 }
 
 .service_info_wrapper_description {
-  color: #7b7b7b;
+  color: #999999;
 }
 
 .works {
@@ -562,8 +562,8 @@
   height: 100vh;
   width: 100vw;
   text-align: center;
-  color: #acacac;
-  border-top: 1px solid #cbc6c0;
+  color: #999999;
+  border-top: 1px solid #999999;
 }
 
 .study_title {
@@ -962,12 +962,14 @@
 
 .integrations_title {
   font-size: 2rem;
-  color: #6c6c6c;
+  color: #6a6a6a;
+  font-weight: bold;
 }
 
 .integrations_text {
   margin: 2vh 0;
-  color: #9a9a9a;
+  color: #999999;
+  width: 80%;
 }
 
 .integrations_wrapper {
@@ -1167,8 +1169,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1177,9 +1180,9 @@
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
-.contact_wrapper_form_container {
-  height: 70%;
-  width: 80%;
+.contact_wrapper_form_form {
+  width: 90%;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1194,34 +1197,44 @@
           flex-direction: column;
 }
 
-.contact_wrapper_form_container_element {
+.contact_wrapper_form_form_element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  height: 15%;
-}
-
-.contact_wrapper_form_container_element_input {
-  width: 100%;
-  height: 60px;
-  border: none;
-  background-color: white;
-  border-bottom: 1px solid gray;
-  font-size: 1.6rem;
-}
-
-.contact_wrapper_form_container_element_error {
   height: 20%;
-  width: 100%;
-  color: red;
-  font-size: 1.2rem;
+  margin: 0 auto;
 }
 
-.contact_wrapper_form_button {
-  width: 15rem;
+.contact_wrapper_form_form_element input {
+  border: none;
+  width: 100%;
+  height: 50px;
+  font-size: 2rem;
+  border-bottom: 1px solid gray;
+}
+
+.contact_wrapper_form_form_element p {
+  font-size: 1.4rem;
+  color: red;
+}
+
+.contact_wrapper_form_form button {
+  width: 18rem;
   height: 4rem;
   background-color: red;
   border-radius: 0.2rem;
-  border: 1px solid #999999;
-  font-size: 1.2rem;
+  border: 1px solid white;
+  font-size: 1.5rem;
   color: white;
   cursor: pointer;
   font-weight: bold;
@@ -1229,8 +1242,12 @@
   transition: 1s ease-in-out;
 }
 
-.contact_wrapper_form_button:hover {
+.contact_wrapper_form_form button:hover {
   color: orange;
+}
+
+.contact_wrapper_form .correct {
+  color: green;
 }
 
 .footer {
@@ -1264,6 +1281,7 @@
 .footer_text {
   width: 80%;
   font-size: 1.2rem;
+  margin: 2vh 0;
 }
 
 .footer_button {
@@ -1303,7 +1321,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  color: #828282;
+  color: #999999;
 }
 
 .footer_footer_icons {

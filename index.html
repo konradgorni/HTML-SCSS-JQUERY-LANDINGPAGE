@@ -14,10 +14,18 @@
      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
      <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
+
      <link rel="stylesheet" href="">
  </head>
 
  <body>
+
+
+
+
+
+
+
 
      <header class="header">
          <div class="header_background">
@@ -404,8 +412,7 @@
              </div>
          </div>
      </section>
-
-     <section class="contact">
+          <section class="contact">
          <h2 class="contact_title">KEEP IN TOUCH</h2>
          <p class="contact_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad ea iusto architecto?</p>
          <div class="symbol">
@@ -442,30 +449,32 @@
 
              </div>
              <div class="contact_wrapper_form">
-                 <div class="contact_wrapper_form_container">
-                     <div class="contact_wrapper_form_container_element">
-                         <input placeholder="Name" class="contact_wrapper_form_container_element_input" type="text">
-                         <p class="contact_wrapper_form_container_element_error"></p>
+                 <form class="contact_wrapper_form_form" action="" method="POST" id="form_contact">
+                     <div class="contact_wrapper_form_form_element">
+                         <input placeholder="Your name" type="text" id="form_name">
+                         <!-- <p class="error"></p>s -->
                      </div>
-                     <div class="contact_wrapper_form_container_element">
-                         <input placeholder="Email" class="contact_wrapper_form_container_element_input" type="email">
-                         <p class="contact_wrapper_form_container_element_error"></p>
+                     <div class="contact_wrapper_form_form_element">
+                         <input placeholder="email" type="text" id="form_email">
+                         <!-- <p class="error"></p> -->
                      </div>
-                     <div class="contact_wrapper_form_container_element">
-                         <input placeholder="Subject" class="contact_wrapper_form_container_element_input" type="text">
-                         <p class="contact_wrapper_form_container_element_error"></p>
+                     <div class="contact_wrapper_form_form_element">
+                         <input placeholder="Subject" type="text" id="form_subject">
+                         <!-- <p class="error"></p> -->
                      </div>
-                     <div class="contact_wrapper_form_container_element">
-                         <input placeholder="Message" class="contact_wrapper_form_container_element_input" type="text">
-
-                         <p class="contact_wrapper_form_container_element_error"></p>
+                     <div class="contact_wrapper_form_form_element">
+                         <input class="contact_wrapper_form_form_element_message" placeholder="message" type="text"
+                             id="form_message">
+                         <!-- <p class="error"></p> -->
                      </div>
-                 </div>
-                 <button class="contact_wrapper_form_button">SEND MESSAGE</button>
+                     <button id="form_button" type="submit">Send</button>
+                 </form>
              </div>
          </div>
      </section>
-      <footer class="footer">
+
+
+     <footer class="footer">
 
          <h2 class="footer_title">Let's Get Started Now.It's FREE</h2>
          <p class="footer_text">30 day free trail.Free plan allows up to 2 projects.Pay if you need more.Cancel
