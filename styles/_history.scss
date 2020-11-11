@@ -14,15 +14,7 @@
     p {
         margin: 5vh 0;
         color: $textColor;
-        @include fontSize("smalltext");
-
-        @include breakpoint("tablet") {
-            @include fontSize("tablettext")
-        }
-
-        @include breakpoint("laptop") {
-            @include fontSize("laptoptext")
-        }
+        @include textRWD;
     }
 
     &_img {
@@ -49,20 +41,8 @@
 
         &_title {
             color: $titleColor;
-            @include fontSize("smallh2");
             line-height: 2rem;
-
-            @include breakpoint("smallxl") {
-                @include fontSize("smallxlh2")
-            }
-
-            @include breakpoint("tablet") {
-                @include fontSize("tableth2")
-            }
-
-            @include breakpoint("laptop") {
-                @include fontSize("laptoph2")
-            }
+            @include titleRWD;
 
             &:before {
                 content: "";

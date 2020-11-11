@@ -14,6 +14,19 @@ $sizePage:("small": 2rem,
     position: relative;
     @include flex-center(column, center, center);
 
+    header {
+
+        height: 10vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
 
 
     &_background {
@@ -95,22 +108,10 @@ $sizePage:("small": 2rem,
         }
 
         &_description {
-            font-size: 1.2rem;
             color: $textColor;
             width: 80%;
             margin: 0 auto;
-
-            @include breakpoint('tablet') {
-                @include fontSize('tablettext');
-            }
-
-            @include breakpoint('laptop') {
-                @include fontSize('laptoptext');
-            }
-
-            @include breakpoint('screenxl') {
-                @include fontSize('screenxltext');
-            }
+            @include textRWD;
 
 
         }
@@ -139,6 +140,10 @@ $sizePage:("small": 2rem,
         left: 2vh;
         z-index: 2;
 
+        @include breakpoint('laptop') {
+            position: relative;
+        }
+
         img {
             width: 12rem;
             height: 5rem;
@@ -158,24 +163,43 @@ $sizePage:("small": 2rem,
             font-size: 3.5rem;
         }
 
+        @include breakpoint('laptop') {
+            display: none;
+        }
 
     }
 
     &_nav {
-
         z-index: 3;
         position: fixed;
         top: 0;
         left: -100vw;
         height: 100vh;
         width: 100vw;
-        display: flex;
         @include flex-center(column, center, center);
         transition: 1s ease-in-out;
+
+        @include breakpoint('laptop') {
+            position: relative;
+            left: 0;
+            width: 60vw;
+            height: 2vh;
+            line-height: 2vh;
+            background-color: transparent;
+
+        }
+
         background-color: black;
 
         &_list {
             list-style-type: none;
+
+            @include breakpoint('laptop') {
+                width: 50vw;
+                @include flex-center(row, space-between, center);
+                height: auto;
+            }
+
 
             &_element {
                 width: 70vw;
@@ -183,6 +207,27 @@ $sizePage:("small": 2rem,
                 margin: 0 auto;
                 border-bottom: 1px solid gray;
                 line-height: 10vh;
+                transition: .5s ease-in-out;
+
+                &:hover {
+                    border-color: red;
+                }
+
+                @include breakpoint('tablet') {
+                    width: 50vw;
+                }
+
+                @include breakpoint('laptop') {
+                    width: 4vw;
+                    height: auto;
+                    margin: 0;
+                    text-align: center;
+
+
+
+                }
+
+
 
 
 
@@ -194,8 +239,14 @@ $sizePage:("small": 2rem,
                 &_link {
                     text-decoration: none;
                     color: white;
-                    font-size: 2rem;
                     float: left;
+                    @include textRWD;
+
+                    @include breakpoint('laptop') {
+                        float: none;
+                        width: 4vw;
+
+                    }
                 }
             }
         }

@@ -64,11 +64,7 @@
 
             &_likes {
 
-                @include fontSize('smalltext');
-
-                @include breakpoint('tablet') {
-                    @include fontSize('tablettext');
-                }
+                @include textRWD;
 
             }
 

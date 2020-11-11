@@ -15,9 +15,14 @@ $("document").ready(() => {
         $("nav").toggleClass("hide")
         $(".menu-toggle i").toggleClass("fa-times")
     });
-    $("header nav ul li a").click(() => {
-        $("nav").toggleClass("hide")
-        $(".menu-toggle i").toggleClass("fa-times")
+    $("header nav ul li a").click((e) => {
+        $("nav").toggleClass("hide");
+        $(".menu-toggle i").toggleClass("fa-times");
+       
+       const currentID=`${$(e.currentTarget).attr("id")}`
+        $(`.${currentID}`).get(0).scrollIntoView();
+
+
     })
     //carusel
     let category = "ALL";

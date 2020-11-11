@@ -80,16 +80,17 @@
         color: white;
         background-color: red;
         text-align: center;
-        line-height: 3rem;
         position: absolute;
         bottom: 4rem;
         right: .5rem;
         transition: 1s ease-in-out;
 
+        @include flex-center(row, center, center);
+
         @include breakpoint('tablet') {
             width: 4rem;
             height: 4rem;
-            line-height: 4rem;
+
 
         }
 

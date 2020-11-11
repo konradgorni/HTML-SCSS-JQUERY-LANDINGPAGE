@@ -13,20 +13,8 @@
     padding: 2vh 0;
 
     &_title {
-        @include fontSize('smallh2');
         color: $titleColor;
-
-        @include breakpoint('smallxl') {
-            @include fontSize('smallxlh2');
-        }
-
-        @include breakpoint('tablet') {
-            @include fontSize('tableth2');
-        }
-
-        @include breakpoint('laptop') {
-            @include fontSize('laptop');
-        }
+        @include titleRWD;
 
         &:before {
             content: "";
@@ -44,19 +32,7 @@
     &_description {
         width: 70vw;
         margin: 2vh 0;
-        @include fontSize('smalltext');
-
-        @include breakpoint('smallxl') {
-            @include fontSize('smallxltext');
-        }
-
-        @include breakpoint('tablet') {
-            @include fontSize('tablettext');
-        }
-
-        @include breakpoint('laptop') {
-            @include fontSize('laptoptext');
-        }
+        @include textRWD;
     }
 
     &_wrapper {
@@ -90,19 +66,7 @@
                     color: white;
                     padding-top: 2vh;
                     letter-spacing: 1px;
-                    @include fontSize('smallh2');
-
-                    @include breakpoint('smallxl') {
-                        @include fontSize('smallxlh2');
-                    }
-
-                    @include breakpoint('tablet') {
-                        @include fontSize('tableth2');
-                    }
-
-                    @include breakpoint('laptop') {
-                        @include fontSize('laptoph2');
-                    }
+                    @include titleRWD;
                 }
 
                 &_circle {
@@ -151,15 +115,7 @@
 
                 &_text {
                     padding: 1vh 0;
-                    @include fontSize("smalltext");
-
-                    @include breakpoint('smallxl') {
-                        @include fontSize('smallxltext');
-                    }
-
-                    @include breakpoint('tablet') {
-                        @include fontSize('tablettext');
-                    }
+                    @include textRWD;
 
                 }
 
@@ -185,6 +141,7 @@
 
     .active_card_pricing_bgc {
         background-color: red;
+        border-color: red;
 
 
 

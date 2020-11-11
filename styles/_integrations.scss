@@ -13,25 +13,9 @@
     }
 
     &_title {
-        @include fontSize('smallh2');
         color: $titleColor;
         font-weight: bold;
-
-        @include breakpoint('smallxl') {
-            @include fontSize('smallxlh2');
-        }
-
-        @include breakpoint('tablet') {
-            @include fontSize('tableth2');
-        }
-
-        @include breakpoint('laptop') {
-            @include fontSize('laptoph2');
-        }
-
-        @include breakpoint('screen') {
-            @include fontSize('screenh2');
-        }
+        @include titleRWD;
 
     }
 
@@ -39,23 +23,7 @@
         margin: 2vh 0;
         color: $textColor;
         width: 80%;
-        @include fontSize('smalltext');
-
-        @include breakpoint('smallxl') {
-            @include fontSize('smallxltext');
-        }
-
-        @include breakpoint('tablet') {
-            @include fontSize('tablettext');
-        }
-
-        @include breakpoint('laptop') {
-            @include fontSize('laptoptext');
-        }
-
-        @include breakpoint('screen') {
-            @include fontSize('screentext');
-        }
+        @include textRWD;
     }
 
     &_wrapper {

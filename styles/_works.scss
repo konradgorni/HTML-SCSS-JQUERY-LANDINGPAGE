@@ -15,15 +15,7 @@
         font-weight: bold;
         letter-spacing: 1px;
         text-align: center;
-        @include fontSize('smallh2');
-
-        @include breakpoint('tablet') {
-            @include fontSize('tableth2');
-        }
-
-        @include breakpoint('screen') {
-            @include fontSize('screenh2');
-        }
+        @include titleRWD;
 
         &:before {
             content: "";
@@ -41,15 +33,7 @@
         text-align: center;
         width: 70%;
         margin: 0 auto;
-        @include fontSize('smalltext');
-
-        @include breakpoint('tablet') {
-            @include fontSize('tablettext');
-        }
-
-        @include breakpoint('screen') {
-            @include fontSize('screentext');
-        }
+        @include textRWD;
     }
 
 
@@ -64,17 +48,17 @@
             width: 12rem;
             height: 3rem;
             border: 1px solid red;
-            @include fontSize('smalltext');
             text-align: center;
             background-color: transparent;
             font-weight: 500;
             transition: 1s ease-in-out;
 
-            @include breakpoint('tablet') {
-                @include fontSize('tablettext');
-                width: 13rem;
+            @include breakpoint("tablet") {
+                width: 15rem;
                 height: 3.5rem;
             }
+
+            @include textRWD;
 
             &:hover {
                 color: red;

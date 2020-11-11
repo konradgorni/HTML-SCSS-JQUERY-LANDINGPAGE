@@ -10,12 +10,7 @@
 
     &_title {
         color: $titleColor;
-        @include fontSize('smallh2');
-        margin: 2vh 0;
-
-        @include breakpoint('tablet') {
-            @include fontSize('tableth2');
-        }
+        @include titleRWD;
 
         &:before {
             content: "";
@@ -172,26 +167,14 @@
 
             &_title {
                 color: $titleColor;
-                @include fontSize('smallxlth2');
-
-                @include breakpoint('smallxl') {
-                    @include fontSize('tableth2');
-                }
+                @include titleRWD;
 
             }
 
             &_text {
                 width: 70%;
                 margin: 0 auto;
-                @include fontSize('smalltext');
-
-                @include breakpoint('smallxl') {
-                    @include fontSize('smallxltext');
-                }
-
-                @include breakpoint('tablet') {
-                    @include fontSize('tablettext');
-                }
+                @include textRWD;
             }
 
 

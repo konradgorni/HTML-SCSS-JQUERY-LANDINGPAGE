@@ -34,13 +34,8 @@
         }
 
         &_title {
-
-            @include fontSize('smallh2');
             line-height: 2rem;
-
-            @include breakpoint('tablet') {
-                @include fontSize('tableth2');
-            }
+            @include titleRWD;
 
 
             &:before {
@@ -67,21 +62,13 @@
             &_title {
                 margin: 2vh 0;
                 color: red;
-                @include fontSize('smallh2');
-
-                @include breakpoint('tablet') {
-                    @include fontSize('tableth2');
-                }
+                @include titleRWD;
 
             }
 
             &_description {
                 color: $textColor;
-                @include fontSize('smalltext');
-
-                @include breakpoint('tablet') {
-                    @include fontSize('tablettext');
-                }
+                @include textRWD;
             }
         }
     }
