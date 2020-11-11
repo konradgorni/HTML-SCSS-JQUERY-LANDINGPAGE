@@ -1,8 +1,17 @@
 @import '_mixin.scss';
+@import "_variables.scss";
 
 .statistic {
     height: 100vh;
     width: 100vw;
+
+    @include breakpoint('tablet') {
+        height: 50vh;
+    }
+
+    @include breakpoint('laptop') {
+        height: 50vh;
+    }
 
 
     background-image: url("../assets/images/statistic_image.png");
@@ -10,6 +19,10 @@
     background-repeat: no-repeat;
     background-position: center;
     @include flex-center(column, space-around, center);
+
+    @include breakpoint('tablet') {
+        @include flex-center(row, space-around, center);
+    }
 
     &_wrapper {
         &_circle {
@@ -24,6 +37,15 @@
                 color: white;
 
                 font-size: 2.5rem;
+
+                @include breakpoint('tablet') {
+                    font-size: 3rem;
+                }
+            }
+
+            @include breakpoint('tablet') {
+                width: 8rem;
+                height: 8rem;
             }
 
 
@@ -33,7 +55,7 @@
 
 
 
-        &_circle:last-child() {
+        &:last-child() {
             margin: 0 100px 0 0;
         }
 
@@ -41,21 +63,46 @@
             @include flex-center(column, space-around, center);
 
             &_likes {
-                font-size: 1.5rem;
+
+                @include fontSize('smalltext');
+
+                @include breakpoint('tablet') {
+                    @include fontSize('tablettext');
+                }
+
             }
 
             &_category {
-                font-size: 1.7rem;
                 letter-spacing: .1rem;
+                @include textRWD();
+
+
             }
         }
     }
 
     .left-margin {
         margin: 0 12rem 0 0;
+
+        @include breakpoint('tablet') {
+            margin: 0;
+        }
+
+        @include breakpoint('laptop') {
+            margin: 0;
+        }
+
     }
 
     .right-margin {
         margin: 0 0 0 12rem;
+
+        @include breakpoint('tablet') {
+            margin: 0;
+        }
+
+        @include breakpoint('laptop') {
+            margin: 0;
+        }
     }
 }

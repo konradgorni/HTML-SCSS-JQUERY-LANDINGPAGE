@@ -3,21 +3,29 @@
 
 .blog {
     text-align: center;
+    padding: 5vh 0;
 
     &_title {
         color: $titleColor;
-        font-size: 2rem;
-        margin-top: 2vh;
+        @include titleRWD;
+
+
     }
 
     &_text {
         margin: 2vh 0;
         color: $textColor;
         width: 70%;
-        margin: 0 auto;
+        margin: 2vh auto;
+        @include textRWD;
     }
 
     &_wrapper {
+        @include breakpoint('laptop') {
+            @include flex-center(column, center, center);
+            margin: 0;
+            padding: 0;
+        }
 
 
         &_element {
@@ -26,10 +34,28 @@
             width: 90vw;
             margin: 5vh auto;
 
+            @include breakpoint('laptop') {
+                @include flex-center(row, center, center);
+                margin: 0;
+                height: auto;
+
+
+            }
+
 
             &_img {
                 width: 100%;
                 height: 50%;
+
+                @include breakpoint('tablet') {
+                    width: 60%;
+                }
+
+                @include breakpoint('laptop') {
+                    width: 40%;
+                    margin: 0;
+                    padding: 0;
+                }
 
             }
 
@@ -41,24 +67,35 @@
                 padding: 5%;
                 @include flex-center(column, center, flex-start);
 
+                @include breakpoint('tablet') {
+                    width: 60%;
+                }
+
+                @include breakpoint('laptop') {
+                    width: 40%;
+                    margin: 0;
+                    padding: 5%;
+                    height: 100;
+                }
+
                 &_text {
                     font-size: 1.2rem;
                 }
 
                 &_title {
                     margin: 1vh 0;
-                    font-size: 1.8rem;
+                    @include titleRWD;
                 }
 
                 &_description {
-                    font-size: 1.2rem;
+                    @include textRWD;
                 }
 
                 &_link {
                     padding-top: 5vh;
                     text-decoration: none;
                     color: white;
-                    font-size: 1rem;
+                    @include textRWD;
 
                     &:hover {
                         color: goldenrod;

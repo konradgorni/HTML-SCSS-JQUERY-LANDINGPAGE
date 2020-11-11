@@ -46,16 +46,16 @@ $breakpoints:(small:320px,
 }
 
 $textSize:(smalltext:1.2rem,
-    smallXLtext:1.4rem,
+    smallxltext:1.4rem,
     tablettext:1.6rem,
     laptoptext:1.7rem,
     screentext:1.8rem,
-    screenXLtext:1.9rem,
+    screenxltext:1.9rem,
     smallh2:1.8rem,
     smallxlh2:1.9rem,
     tableth2:2.3rem,
     laptoph2:2.5rem,
-    screnh2:2.6rem,
+    screenh2:2.6rem,
     screenxlh2:2.7rem,
 
 
@@ -65,4 +65,40 @@ $textSize:(smalltext:1.2rem,
 @mixin fontSize($size) {
     font-size: map-get($textSize, $size);
 
+}
+
+@mixin titleRWD() {
+    @include fontSize('smallh2');
+
+    @include breakpoint('smallxl') {
+        @include fontSize('smallxlh2');
+    }
+
+    @include breakpoint('tablet') {
+        @include fontSize('tableth2');
+    }
+
+    @include breakpoint('laptop') {
+        @include fontSize('laptoph2');
+    }
+
+    @include breakpoint('screen') {
+        @include fontSize('screenth2');
+    }
+}
+
+@mixin textRWD() {
+    @include fontSize('smalltext');
+
+    @include breakpoint('smallxl') {
+        @include fontSize('smallxltext');
+    }
+
+    @include breakpoint('tablet') {
+        @include fontSize('tablettext');
+    }
+
+    @include breakpoint('laptop') {
+        @include fontSize('laptoptext');
+    }
 }

@@ -58,11 +58,20 @@ $sizePage:("small": 2rem,
                 @include custom-buttom(red, 18rem, 4rem, #e74c3c, 1.5rem);
                 margin: 2vh 0;
 
+                @include breakpoint('laptop') {
+                    @include custom-buttom(red, 20rem, 5rem, #e74c3c, 1.5rem);
+                }
+
+
 
             }
 
             &_button:last-child {
                 @include custom-buttom(transparent, 18rem, 4rem, white, 1.5rem);
+
+                @include breakpoint('laptop') {
+                    @include custom-buttom(transparent, 20rem, 5rem, white, 1.5rem);
+                }
             }
 
 
@@ -74,8 +83,14 @@ $sizePage:("small": 2rem,
             font-weight: bold;
             font-size: 3rem;
 
+
+
             @include breakpoint('tablet') {
-                @include fontSize('medium');
+                font-size: 3.8rem;
+            }
+
+            @include breakpoint('screenxl') {
+                font-size: 4rem;
             }
         }
 
@@ -85,6 +100,18 @@ $sizePage:("small": 2rem,
             width: 80%;
             margin: 0 auto;
 
+            @include breakpoint('tablet') {
+                @include fontSize('tablettext');
+            }
+
+            @include breakpoint('laptop') {
+                @include fontSize('laptoptext');
+            }
+
+            @include breakpoint('screenxl') {
+                @include fontSize('screenxltext');
+            }
+
 
         }
 
@@ -92,7 +119,15 @@ $sizePage:("small": 2rem,
             font-size: 1.5rem;
 
             @include breakpoint('tablet') {
-                font-size: 1.7rem
+                @include fontSize('tablettext');
+            }
+
+            @include breakpoint('laptop') {
+                @include fontSize('laptoptext');
+            }
+
+            @include breakpoint('screenxl') {
+                @include fontSize('screenxltext');
             }
         }
 
@@ -135,9 +170,7 @@ $sizePage:("small": 2rem,
         height: 100vh;
         width: 100vw;
         display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
+        @include flex-center(column, center, center);
         transition: 1s ease-in-out;
         background-color: black;
 

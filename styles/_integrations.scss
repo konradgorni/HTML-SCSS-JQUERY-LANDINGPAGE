@@ -8,16 +8,54 @@
     background-color: #f4f5f9;
     text-align: center;
 
+    @include breakpoint('laptop') {
+        height: 50vh;
+    }
+
     &_title {
-        font-size: 2rem;
+        @include fontSize('smallh2');
         color: $titleColor;
         font-weight: bold;
+
+        @include breakpoint('smallxl') {
+            @include fontSize('smallxlh2');
+        }
+
+        @include breakpoint('tablet') {
+            @include fontSize('tableth2');
+        }
+
+        @include breakpoint('laptop') {
+            @include fontSize('laptoph2');
+        }
+
+        @include breakpoint('screen') {
+            @include fontSize('screenh2');
+        }
+
     }
 
     &_text {
         margin: 2vh 0;
         color: $textColor;
         width: 80%;
+        @include fontSize('smalltext');
+
+        @include breakpoint('smallxl') {
+            @include fontSize('smallxltext');
+        }
+
+        @include breakpoint('tablet') {
+            @include fontSize('tablettext');
+        }
+
+        @include breakpoint('laptop') {
+            @include fontSize('laptoptext');
+        }
+
+        @include breakpoint('screen') {
+            @include fontSize('screentext');
+        }
     }
 
     &_wrapper {
@@ -25,11 +63,24 @@
         width: 100%;
         @include flex-center(column, center, center);
 
+        @include breakpoint('laptop') {
+            @include flex-center(row, space-around, center);
+        }
+
         &_card {
             width: 70%;
             height: 8rem;
             background-color: white;
             text-align: center;
+
+            @include breakpoint('tablet') {
+                height: 10rem;
+            }
+
+            @include breakpoint('laptop') {
+                height: 12rem;
+                width: 20%;
+            }
 
             @include flex-center(row, center, center);
         }

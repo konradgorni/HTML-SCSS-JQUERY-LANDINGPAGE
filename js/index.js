@@ -131,12 +131,20 @@ $("document").ready(() => {
 
     $(".study_wrapper_post").on("swipeleft", function () {
 
+        changeDot("right");
+        changePosts();
+    });
+        $(".study_wrapper_post_btn_right").on("click", function () {
 
-        $(".active_dot").removeClass("active_dot");
         changeDot("right");
         changePosts();
     });
     $(".study_wrapper_post").on("swiperight", function () {
+        changeDot("left");
+        changePosts();
+    });
+            $(".study_wrapper_post_btn_left").on("click", function () {
+
         changeDot("left");
         changePosts();
     });

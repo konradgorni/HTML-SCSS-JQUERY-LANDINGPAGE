@@ -2,27 +2,43 @@
 @import "_variables.scss";
 
 .contact {
-    height: 150vh;
+    min-height: 130vh;
     background-color: #f4f5f9;
     text-align: center;
     color: $textColor;
     padding: 5% 0;
 
+    @include breakpoint('tablet') {
+        height: 170vh;
+    }
+
+    @include breakpoint('laptop') {
+        height: 150vh;
+    }
+
 
     &_title {
         color: $titleColor;
-        font-size: 2rem;
+        @include titleRWD;
     }
 
     &_text {
-        font-size: 1.2rem;
         width: 70%;
         margin: 2vh auto;
+        @include textRWD;
     }
 
     &_wrapper {
-        height: 80%;
+        height: 100vh;
         width: 100%;
+
+
+
+        @include breakpoint('laptop') {
+            width: 100vw;
+            margin: 0 auto;
+            @include flex-center(row, space-around, center);
+        }
 
 
 
@@ -40,18 +56,30 @@
             -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 
+            @include breakpoint('tablet') {
+                width: 50%;
+                height: 50%;
+            }
+
+            @include breakpoint('laptop') {
+                height: 80vh;
+                width: 40vw;
+                margin: 0;
+                padding: 0;
+            }
+
             &_element {
                 height: 30%;
                 @include flex-center(column, space-around, center);
 
                 &_title {
                     color: red;
-                    font-size: 1.7rem;
                     letter-spacing: 1px;
+                    @include titleRWD;
                 }
 
                 &_text {
-                    font-size: 1.3rem;
+                    @include textRWD;
                 }
             }
         }
@@ -64,6 +92,23 @@
             -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+
+            @include breakpoint('tablet') {
+                height: 60%;
+                width: 50%;
+
+
+            }
+
+            @include breakpoint('laptop') {
+                height: 80vh;
+                width: 40vw;
+
+
+            }
+
+
+
 
             &_form {
                 width: 90%;
@@ -83,11 +128,18 @@
                         height: 50px;
                         font-size: 2rem;
                         border-bottom: 1px solid gray;
+
+                        @include breakpoint('laptop') {
+
+                            width: 20vw;
+
+
+
+                        }
                     }
 
                     p {
-                        font-size: 1.4rem;
-                        color: red;
+                        @include textRWD;
                     }
 
 
@@ -95,6 +147,12 @@
 
                 button {
                     @include custom-buttom(red, 18rem, 4rem, white, 1.5rem);
+
+                    @include breakpoint('laptop') {
+                        @include custom-buttom(red, 20rem, 5rem, white, 1.7rem);
+
+
+                    }
                 }
 
             }

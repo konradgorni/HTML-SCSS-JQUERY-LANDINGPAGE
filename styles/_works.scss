@@ -15,7 +15,15 @@
         font-weight: bold;
         letter-spacing: 1px;
         text-align: center;
-        font-size: 1.8rem;
+        @include fontSize('smallh2');
+
+        @include breakpoint('tablet') {
+            @include fontSize('tableth2');
+        }
+
+        @include breakpoint('screen') {
+            @include fontSize('screenh2');
+        }
 
         &:before {
             content: "";
@@ -33,32 +41,17 @@
         text-align: center;
         width: 70%;
         margin: 0 auto;
-    }
+        @include fontSize('smalltext');
 
-    &_symbol {
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-
-        &_line {
-            width: 8rem;
-            height: .2rem;
-            background-color: #f1ebe7;
-            display: block;
-
+        @include breakpoint('tablet') {
+            @include fontSize('tablettext');
         }
 
-        &_dot {
-            width: 1rem;
-            height: 1rem;
-            background-color: red;
-            display: block;
-            border-radius: 50%;
-            margin: 0 2rem;
+        @include breakpoint('screen') {
+            @include fontSize('screentext');
         }
     }
+
 
     &_category {
         width: 100%;
@@ -71,9 +64,22 @@
             width: 12rem;
             height: 3rem;
             border: 1px solid red;
-            font-size: 1.5rem;
+            @include fontSize('smalltext');
             text-align: center;
             background-color: transparent;
+            font-weight: 500;
+            transition: 1s ease-in-out;
+
+            @include breakpoint('tablet') {
+                @include fontSize('tablettext');
+                width: 13rem;
+                height: 3.5rem;
+            }
+
+            &:hover {
+                color: red;
+                cursor: pointer;
+            }
         }
 
     }
@@ -96,6 +102,15 @@
             height: 50%;
             border: 1px solid black;
 
+            @include breakpoint('tablet') {
+                width: 60%;
+            }
+
+            @include breakpoint('laptop') {
+                width: 50%;
+            }
+
+
 
         }
 
@@ -109,10 +124,18 @@
             font-size: 2rem;
             color: white;
             border: none;
+            transition: 1s ease-in-out;
+
+            @include breakpoint('tablet') {
+                width: 6rem;
+                height: 6rem;
+                font-size: 3rem;
+            }
 
             &:hover {
                 i {
                     color: black;
+                    cursor: pointer;
                 }
 
             }

@@ -10,17 +10,20 @@
     position: relative;
     text-align: center;
     @include flex-center(column, center, center);
-
     text-shadow: black 0.3em 0.3em 0.5em;
 
+    @include breakpoint('tablet') {
+        height: 50vh;
+    }
+
     &_title {
-        font-size: 2rem;
+        @include titleRWD();
     }
 
     &_text {
         width: 80%;
-        font-size: 1.2rem;
         margin: 2vh 0;
+        @include textRWD();
 
     }
 
@@ -39,6 +42,11 @@
         @include flex-center(row, space-around, center);
         color: $textColor;
 
+        &_text {
+            width: 40%;
+            @include textRWD();
+        }
+
 
         &_icons {
             width: 40%;
@@ -54,6 +62,7 @@
                     font-size: 1.8rem;
                     color: #828282;
                     transition: 1s ease-in-out;
+                    @include titleRWD();
 
                     &:hover {
                         color: red;
@@ -77,6 +86,13 @@
         right: .5rem;
         transition: 1s ease-in-out;
 
+        @include breakpoint('tablet') {
+            width: 4rem;
+            height: 4rem;
+            line-height: 4rem;
+
+        }
+
         &:hover {
             background-color: white;
             cursor: pointer;
@@ -89,6 +105,11 @@
 
         i {
             font-size: 1.5rem;
+
+            @include breakpoint('tablet') {
+                font-size: 2rem;
+
+            }
         }
     }
 }

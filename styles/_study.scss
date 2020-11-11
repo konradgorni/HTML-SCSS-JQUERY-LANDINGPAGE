@@ -10,8 +10,12 @@
 
     &_title {
         color: $titleColor;
-        font-size: 1.8rem;
+        @include fontSize('smallh2');
         margin: 2vh 0;
+
+        @include breakpoint('tablet') {
+            @include fontSize('tableth2');
+        }
 
         &:before {
             content: "";
@@ -28,12 +32,40 @@
     &_description {
         width: 70%;
         margin: 0 auto;
+        @include fontSize('smallxltext');
+
+        @include breakpoint('tablet') {
+            @include fontSize('tablettext');
+        }
     }
 
     &_wrapper {
         margin-top: 2vh;
         width: 100vw;
         height: auto;
+        position: relative;
+
+        @include breakpoint('laptop') {
+            @include flex-center(row, center, center);
+        }
+
+        &_image {
+            background-image: url("../assets/images/study_image.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 60vh;
+            width: 40%;
+            display: none;
+
+            @include breakpoint('laptop') {
+                display: block;
+                margin-left: 30vw;
+            }
+        }
+
+
+
 
 
         &_post {
@@ -45,6 +77,69 @@
             -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+            position: relative;
+            background-color: white;
+
+            @include breakpoint('laptop') {
+                height: 50vh;
+                width: 30%;
+                margin: 0 0;
+                width: 40vw;
+                position: absolute;
+                top: 50%;
+                left: 30%;
+                transform: translate(-50%, -50%);
+            }
+
+            &_btn {
+                color: red;
+                position: absolute;
+                transform: translate(0%, -50%);
+                display: block;
+                width: 4rem;
+                height: 4rem;
+                background-color: red;
+                text-align: center;
+                line-height: 4rem;
+                font-size: 2rem;
+                color: white;
+                border: none;
+                transition: 1s ease-in-out;
+                display: none;
+
+                @include breakpoint('tablet') {
+                    width: 6rem;
+                    height: 6rem;
+                    font-size: 3rem;
+                    display: block;
+                }
+
+
+
+                i {
+                    transition: 1s ease-in;
+                }
+
+                &:hover {
+                    i {
+                        color: black;
+                        cursor: pointer;
+                    }
+
+                }
+
+                &_left {
+                    top: 50%;
+                    left: 0;
+                }
+
+                &_right {
+                    top: 50%;
+                    right: 0;
+                }
+            }
+
+
 
             &_square {
                 width: 4.5rem;
@@ -53,25 +148,53 @@
                 transform: rotate(45deg);
                 @include flex-center(row, center, center);
 
+                @include breakpoint('tablet') {
+                    width: 6rem;
+                    height: 6rem;
+
+
+                }
+
 
                 i {
                     transform: rotate(-45deg);
                     font-size: 2rem;
                     color: white;
+
+                    @include breakpoint('tablet') {
+                        font-size: 3rem;
+
+
+                    }
+
                 }
             }
 
             &_title {
                 color: $titleColor;
+                @include fontSize('smallxlth2');
+
+                @include breakpoint('smallxl') {
+                    @include fontSize('tableth2');
+                }
+
             }
 
-            &_symbol {
-                display: block;
-                width: 5rem;
-                height: 0.2rem;
-                background-color: #6a6a6a;
-                ;
+            &_text {
+                width: 70%;
+                margin: 0 auto;
+                @include fontSize('smalltext');
+
+                @include breakpoint('smallxl') {
+                    @include fontSize('smallxltext');
+                }
+
+                @include breakpoint('tablet') {
+                    @include fontSize('tablettext');
+                }
             }
+
+
 
             &_button {
                 @include custom-buttom(red, 20rem, 5rem, red, 1.5rem)
