@@ -18,8 +18,8 @@ $("document").ready(() => {
     $("header nav ul li a").click((e) => {
         $("nav").toggleClass("hide");
         $(".menu-toggle i").toggleClass("fa-times");
-       
-       const currentID=`${$(e.currentTarget).attr("id")}`
+
+        const currentID = `${$(e.currentTarget).attr("id")}`
         $(`.${currentID}`).get(0).scrollIntoView();
 
 
@@ -139,7 +139,7 @@ $("document").ready(() => {
         changeDot("right");
         changePosts();
     });
-        $(".study_wrapper_post_btn_right").on("click", function () {
+    $(".study_wrapper_post_btn_right").on("click", function () {
 
         changeDot("right");
         changePosts();
@@ -148,7 +148,7 @@ $("document").ready(() => {
         changeDot("left");
         changePosts();
     });
-            $(".study_wrapper_post_btn_left").on("click", function () {
+    $(".study_wrapper_post_btn_left").on("click", function () {
 
         changeDot("left");
         changePosts();
@@ -213,6 +213,7 @@ $("document").ready(() => {
             $('#form_contact')[0].reset();
 
             $('#form_button').after('<p class="correct">Message sent</p>')
+            setTimeout('$(".correct").hide()', 2500);
 
 
         }
